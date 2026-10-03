@@ -1,0 +1,66 @@
+:root {
+  /* ── Brand Palette (HWS: Dark Navy + Executive Gold + Crisp Light) ── */
+  --navy-950: #070e24;
+  --navy-900: #0c1736;
+  --navy-850: #101e46;
+  --navy-800: #152552;
+  --navy-700: #1a2f66;
+  --navy-600: #254085;
+  --navy-500: #3355a8;
+  --navy-400: #4f73c7;
+  --navy-300: #88a4e3;
+  --navy-200: #bcd0f5;
+  --navy-100: #e3ecfc;
+  --navy-50: #f1f5fd;
+
+  --gold-700: #87651a;
+  --gold-600: #aa8225;
+  --gold-500: #c9a84c;
+  --gold-400: #d8bc68;
+  --gold-300: #e5cf8b;
+  --gold-200: #f0e3b6;
+  --gold-100: #f8f2d8;
+  --gold-50: #fdfbf4;
+
+  --white: #ffffff;
+  --off-white: #fbfbfa;
+  --cream: #f4f2eb;
+  --cream-dark: #ebe7dc;
+
+  /* Typography Colors */
+  --text-primary: #0c1736;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+  --text-dark-theme: #e9ecf2;
+
+  /* Lines & Borders */
+  --line-light: #e8e4da;
+  --line-subtle: #f0ede4;
+  --line-dark: rgba(201, 168, 76, 0.2);
+
+  /* Typography */
+  --ff-serif: 'Playfair Display', 'Georgia', serif;
+  --ff-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Radii */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-full: 9999px;
+
+  /* Shadows */
+  --sh-sm: 0 2px 8px rgba(12, 23, 54, 0.04);
+  --sh-soft: 0 4px 20px rgba(12, 23, 54, 0.06);
+  --sh-card: 0 12px 36px rgba(12, 23, 54, 0.08);
+  --sh-card-hover: 0 20px 48px rgba(12, 23, 54, 0.12);
+  --sh-dark: 0 16px 48px rgba(7, 14, 36, 0.4);
+  --sh-gold: 0 4px 20px rgba(201, 168, 76, 0.3);
+  --sh-btn: 0 4px 16px rgba(12, 23, 54, 0.2);
+
+  --nav-h: 80px;
+  --maxw: 1220px;
+}
