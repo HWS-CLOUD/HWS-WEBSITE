@@ -426,18 +426,22 @@
   }
 }
 
-@media (max-width: 640px),
-(hover: none),
-(pointer: coarse) {
+@media (max-width: 640px) {
 
-  .hero-bg__blob,
-  .hero-bg__line,
-  .hero-bg__wave {
-    animation: none;
+  .hero-bg__blob {
+    width: min(90vw, 500px);
+  }
+
+  .hero-bg__blob--a {
+    animation-duration: 70s;
+  }
+
+  .hero-bg__blob--b {
+    animation-duration: 80s;
   }
 
   .hero-bg__wave {
-    display: none;
+    animation-duration: 14s;
   }
 }
 
