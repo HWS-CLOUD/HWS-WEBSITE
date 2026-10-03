@@ -151,6 +151,16 @@ button, input, select, textarea { font: inherit; color: inherit; }
   transform: translateX(3px);
 }
 
+/* Sent Button: Gold success state */
+.btn--sent {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+  color: var(--white);
+  border-color: var(--gold-600);
+  box-shadow: var(--sh-gold);
+  pointer-events: none;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
 /* Outline Button: Dark Blue border */
 .btn--outline {
   background: transparent;

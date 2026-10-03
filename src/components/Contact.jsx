@@ -34,6 +34,7 @@ export default function Contact({ service, setService }) {
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
   const data = { ...v, servico: service };
 
   const check = (k) => {
@@ -81,14 +82,14 @@ export default function Contact({ service, setService }) {
           })
         });
         if (!r.ok) throw new Error();
-        setStatus({ type: 'ok', text: 'Mensagem enviada com sucesso. A equipa da HWS responderá brevemente.' });
-        setTimeout(() => setStatus(null), 5000);
+        setLoading(false);
+        setSent(true);
         setV({ nome: '', empresa: '', email: '', tel: '', msg: '', website: '' });
         setService('');
+        setTimeout(() => setSent(false), 3000);
       } catch {
-        setStatus({ type: 'bad', text: `Não foi possível enviar a mensagem. Tente novamente ou escreva para ${CONTACT.email}.` });
-      } finally {
         setLoading(false);
+        setStatus({ type: 'bad', text: `Não foi possível enviar a mensagem. Tente novamente ou escreva para ${CONTACT.email}.` });
       }
       return;
     }
@@ -105,6 +106,13 @@ export default function Contact({ service, setService }) {
     'aria-invalid': !!errors[id],
     'aria-describedby': `e-${id}`,
   });
+
+  const btnClass = sent ? 'btn btn--sent' : 'btn btn--primary';
+  const btnContent = loading
+    ? 'A processar o envio...'
+    : sent
+      ? 'Enviado ✓'
+      : <>Enviar mensagem de consulta <Icon name="arrow" /></>;
 
   return (
     <section id="contactos" className="section section--cream">
@@ -215,8 +223,8 @@ export default function Contact({ service, setService }) {
           </Field>
           <input className="hp" type="text" tabIndex="-1" autoComplete="off" aria-hidden="true" value={v.website} onChange={set('website')} />
           {status && <div className={`status status--${status.type}`} role="status">{status.text}</div>}
-          <button className="btn btn--primary" type="submit" disabled={loading}>
-            {loading ? 'A processar o envio...' : <>Enviar mensagem de consulta <Icon name="arrow" /></>}
+          <button className={btnClass} type="submit" disabled={loading || sent}>
+            {btnContent}
           </button>
         </form>
       </div>
