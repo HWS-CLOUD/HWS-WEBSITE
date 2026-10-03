@@ -454,7 +454,8 @@
   }
 
   .hero-bg__wave {
-    display: none;
+    -webkit-mask-position: 50% 0;
+    mask-position: 50% 0;
   }
 }
 
