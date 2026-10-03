@@ -192,16 +192,16 @@ export default function Contact({ service, setService }) {
         {/* ── Coluna Direita: Formulário Completo de Solicitação ── */}
         <form className="form reveal reveal--right reveal-delay-1" onSubmit={submit} noValidate aria-label="Formulário de contacto">
           <Field id="nome" error={errors.nome} label="Nome completo *">
-            <input {...common('nome')} autoComplete="name" required placeholder="Ex.: Hermenegildo Cofe" />
+            <input {...common('nome')} autoComplete="name" required />
           </Field>
           <Field id="empresa" error={errors.empresa} label="Empresa / Instituição *">
-            <input {...common('empresa')} autoComplete="organization" placeholder="Nome da organização" />
+            <input {...common('empresa')} autoComplete="organization"/>
           </Field>
           <Field id="email" error={errors.email} label="Email profissional *">
-            <input {...common('email')} type="email" autoComplete="email" required placeholder="exemplo@empresa.co.mz" />
+            <input {...common('email')} type="email" autoComplete="email" required />
           </Field>
           <Field id="tel" error={errors.tel} label="Número de telefone">
-            <input {...common('tel')} type="tel" autoComplete="tel" placeholder="+258 84 000 0000" />
+            <input {...common('tel')} type="tel" autoComplete="tel" />
           </Field>
           <Field id="servico" error={errors.servico} label="Serviço de interesse *" wide>
             <select {...common('servico')} required>
